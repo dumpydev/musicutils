@@ -14,19 +14,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.pink,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink).copyWith(secondary: Colors.pinkAccent, brightness: Brightness.light),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.pink,
-        accentColor: Colors.pinkAccent,
-        brightness: Brightness.dark,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink).copyWith(secondary: Colors.pinkAccent, brightness: Brightness.dark),
       ),
+
       home: Scales(),
       routes: {
         '/settings': (context) => Settings(),

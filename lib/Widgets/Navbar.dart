@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class Navbar extends StatefulWidget {
@@ -28,6 +30,7 @@ class _NavbarState extends State<Navbar> {
         }
       },
       selectedIndex: widget.index,
+      height: MediaQuery.of(context).size.height * 0.08,
     );
   }
 }

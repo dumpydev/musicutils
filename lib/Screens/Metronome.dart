@@ -33,5 +33,3 @@ class _MetronomeState extends State<Metronome> {
     );
   }
 }
-
-

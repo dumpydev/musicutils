@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../Widgets/Navbar.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -10,6 +13,14 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
+  final Uri github = Uri.parse("https://github.com/dumpydev/musicutils");
+
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(github, mode: LaunchMode.externalApplication)) {
+      throw 'Could not launch $github';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +46,11 @@ class _SettingsState extends State<Settings> {
               ),
             ),
           ),
-
+          ElevatedButton(
+              onPressed: () {
+                _launchUrl();
+              },
+              child: Text("Github"))
         ]),
       ),
       bottomNavigationBar: Navbar(index: 2),
