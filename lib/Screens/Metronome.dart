@@ -21,7 +21,7 @@ class _MetronomeState extends State<Metronome> {
         child: Column(children: [
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           Text('Metronome',
-              style: GoogleFonts.aBeeZee(
+              style: GoogleFonts.montserrat(
                   textStyle: TextStyle(
                 fontSize: 32.0,
                 fontWeight: FontWeight.w700,

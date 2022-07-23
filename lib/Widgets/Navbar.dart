@@ -18,6 +18,7 @@ class _NavbarState extends State<Navbar> {
       destinations: [
         NavigationDestination(icon: Icon(Icons.timer), label: "Metronome"),
         NavigationDestination(icon: Icon(Icons.music_note), label: "Scales"),
+        NavigationDestination(icon: Icon(Icons.timer_3), label: "Stopwatch"),
         NavigationDestination(icon: Icon(Icons.settings), label: "Settings"),
       ],
       onDestinationSelected: (int index) {
@@ -25,8 +26,10 @@ class _NavbarState extends State<Navbar> {
           Navigator.pushNamed(context, '/metronome');
         } else if (index == 1) {
           Navigator.pushNamed(context, '/');
-        } else if (index == 2) {
+        } else if (index == 3) {
           Navigator.pushNamed(context, '/settings');
+        } else if (index == 2) {
+          Navigator.pushNamed(context, '/stopwatch');
         }
       },
       selectedIndex: widget.index,

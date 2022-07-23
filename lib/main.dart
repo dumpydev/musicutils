@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musicutils/Screens/Metronome.dart';
-
+import 'Screens/Stopwatch.dart';
 import 'Screens/Scales.dart';
 import 'Screens/Settings.dart';
 
@@ -25,11 +25,12 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink).copyWith(secondary: Colors.pinkAccent, brightness: Brightness.dark),
       ),
-
+      debugShowCheckedModeBanner: false,
       home: Scales(),
       routes: {
         '/settings': (context) => Settings(),
         '/metronome': (context) => Metronome(),
+        '/stopwatch': (context) => SW(),
       },
     );
   }

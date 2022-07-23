@@ -30,7 +30,7 @@ class _SettingsState extends State<Settings> {
         child: Column(children: [
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           Text('Settings',
-              style: GoogleFonts.aBeeZee(
+              style: GoogleFonts.montserrat(
                   textStyle: TextStyle(
                 fontSize: 40.0,
                 fontWeight: FontWeight.w700,
@@ -39,7 +39,7 @@ class _SettingsState extends State<Settings> {
           Text(
             "(C) 2022 by Andrew Wang.\nAll rights reserved.",
             textAlign: TextAlign.center,
-            style: GoogleFonts.aBeeZee(
+            style: GoogleFonts.montserrat(
               textStyle: TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.w700,
@@ -53,7 +53,7 @@ class _SettingsState extends State<Settings> {
               child: Text("Github"))
         ]),
       ),
-      bottomNavigationBar: Navbar(index: 2),
+      bottomNavigationBar: Navbar(index: 3),
     );
   }
 }
